@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, StyleSheet, TouchableOpacity, Text, SafeAreaView } from 'react-native';
 import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
 // Screen Imports
 import Dashboard from './screens/Dashboard';
@@ -9,6 +10,8 @@ import { AiAssistant } from './screens/AiAssistant';
 import FloorSelection from './screens/FloorSelection';
 import MapScreen from './screens/MapScreen';
 import QRScanner from './screens/QRScanner';
+
+const Stack = createStackNavigator();
 
 export default function App() {
   const [currentScreen, setCurrentScreen] = useState('Home');
