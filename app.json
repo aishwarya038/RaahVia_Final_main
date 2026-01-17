@@ -1,0 +1,69 @@
+{
+  "expo": {
+    "name": "RaahVia",
+    "slug": "RaahVia_Final",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/logo.png",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#000000"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.raahvia.sbu",
+      "infoPlist": {
+        "NSCameraUsageDescription": "RaahVia needs access to your camera to scan QR codes for indoor navigation.",
+        "NSMotionUsageDescription": "RaahVia uses motion sensors to track your steps on the map.",
+        "NSSpeechRecognitionUsageDescription": "RaahVia uses speech recognition for voice-guided search.",
+        "NSMicrophoneUsageDescription": "RaahVia uses the microphone for voice commands."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/logo.png",
+        "backgroundColor": "#000000"
+      },
+      "package": "com.raahvia.sbu",
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO",
+        "BODY_SENSORS",
+        "FOREGROUND_SERVICE"
+      ]
+    },
+    "plugins": [
+      "expo-splash-screen",
+      "expo-font",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow RaahVia to use the camera.",
+          "microphonePermission": "Allow RaahVia to use the microphone."
+        }
+      ],
+      [
+        "expo-sensors",
+        {
+          "motionPermission": "Allow RaahVia to use motion sensors."
+        }
+      ],
+      [
+        "expo-speech-recognition",
+        {
+          "microphonePermission": "Allow RaahVia to use the microphone for speech.",
+          "speechRecognitionPermission": "Allow RaahVia to convert speech to text."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "a5ae688f-cb3e-43b6-a756-976b7f4d3695"
+      }
+    },
+    "owner": "aishwarya33"
+  }
+}
